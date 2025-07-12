@@ -1,92 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  height:100vh;display:flex;align-items:center;justify-content:center;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:linear-gradient(180deg,#89f7fe,#66a6ff);
 }
-
-body {
-  height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
+#weather-container{
+  width:380px;text-align:center;color:#fff;
+  background:rgba(255,255,255,.15);backdrop-filter:blur(10px);
+  padding:30px;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
-
-#weather-container {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 30px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  z-index: 10;
-  width: 350px;
-}
-
-#emoji {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-input {
-  width: 90%;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-button {
-  padding: 10px 20px;
-  background: #e0b3ff;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #c084fc;
-}
-
-#weather-info {
-  margin-top: 20px;
-  color: white;
-  font-size: 18px;
-}
-
-/* Flying Birds */
-.bird-container {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.bird {
-  position: absolute;
-  left: -100px;
-  width: 60px;
-  height: 60px;
-  background-image: url('bird.png'); /* Your local bird image */
-  background-size: contain;
-  background-repeat: no-repeat;
-  animation: fly 16s linear infinite;
-}
-
-@keyframes fly {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(120vw);
-    opacity: 0.3;
-  }
-}
+input{width:90%;padding:10px;border-radius:10px;border:none;font-size:16px;margin-top:10px}
+button{margin-top:12px;padding:10px 20px;border:none;border-radius:10px;
+  background:#ffffff44;color:#fff;font-weight:bold;cursor:pointer}
+button:hover{background:#ffffff66}
+#emoji{font-size:2.5rem;margin:10px 0}
+#weather-icon{width:110px;display:none;margin:10px auto}
+#temp-div p{font-size:48px;margin:0}
+#hourly-forecast{display:flex;overflow-x:auto;gap:10px;margin-top:15px}
+.hourly-item{min-width:80px;text-align:center;font-size:14px}
+.hourly-item img{width:32px;height:32px}
