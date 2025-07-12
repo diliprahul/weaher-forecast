@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="weather1.css" />
 </head>
 <body>
-  <!-- Animated Birds -->
-  <div class="bird-container">
-    <div class="bird" style="top:10%; animation-delay:0s;"></div>
-    <div class="bird" style="top:35%; animation-delay:4s;"></div>
-    <div class="bird" style="top:60%; animation-delay:8s;"></div>
-  </div>
-
-  <!-- Weather App UI -->
   <div id="weather-container">
     <h2>Weather App</h2>
+
+    <!-- ✨ Emoji that reacts to the weather -->
     <div id="emoji">😊</div>
-    <input type="text" id="city-input" placeholder="Enter city"/>
+
+    <input type="text" id="city" placeholder="Enter city" />
     <button onclick="getWeather()">Search</button>
+
+    <!-- Current‑weather block -->
+    <img id="weather-icon" alt="icon" />
+    <div id="temp-div"></div>
     <div id="weather-info"></div>
+
+    <!-- Hourly forecast -->
+    <h3>Next 24 h</h3>
+    <div id="hourly-forecast"></div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="weather.js"></script>
 </body>
 </html>
